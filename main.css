@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;600&family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --text: #cfd8e5;
+  --bg: #17161b;
+  --primary: #46d5ec;
+  --secondary: #133a4e;
+  --accent: #d7a946;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: sans-serif;
+  padding: 4rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#job h4,
+#projects h4,
+#social h4 {
+  font-family: "Inconsolata", monospace;
+}
+
+a {
+  color: var(--text);
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Inconsolata", monospace;
+}
+
+#hero {
+  min-height: 100vh;
+}
+
+nav,
+main,
+#job,
+.social-wrapper,
+.project-detail {
+  display: flex;
+}
+
+nav {
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+menu a {
+  font-size: 1.125rem;
+}
+menu a::after {
+  content: "|";
+  margin: 0 0.75rem;
+}
+
+menu a:last-child::after {
+  content: "";
+}
+
+#logo {
+  font-size: 2rem;
+}
+
+#hero main {
+  flex-direction: column;
+  height: calc(100vh - 12rem);
+  justify-content: center;
+}
+
+main h1 {
+  font-size: 6rem;
+  color: var(--accent);
+}
+
+main h2 {
+  font-size: 8rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 3.125rem;
+  opacity: 0.5;
+}
+
+#job {
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30vh;
+}
+
+#job p {
+  text-align: end;
+  font-size: 1.5rem;
+  max-width: 40ch;
+  line-height: 2.125rem;
+}
+
+#job a,
+.brief-takeaway-tech a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+#job main {
+  flex-direction: column;
+}
+
+.project {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--text);
+}
+
+.project:last-child {
+  border: none;
+}
+
+.start-date-card,
+.project-tags,
+.label {
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  align-self: flex-end;
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+
+.start-date-card p {
+  font-size: 1rem !important;
+}
+.project-tags,
+.project-short-desc {
+  margin: 1.75rem 0;
+}
+
+.project-title {
+  font-size: 1.75rem;
+}
+
+.project-short-desc {
+  font-size: 1.125rem;
+}
+
+.read-more {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.project-img img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+#social {
+  margin: 3rem 0;
+}
+
+#social h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+#social h3 {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+#social main {
+  flex-direction: column;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.social-wrapper {
+  margin: 2rem auto;
+}
+
+.logo-social-wrapper a {
+  margin: 0 3rem;
+  width: 5rem;
+  cursor: pointer;
+}
+
+.logo-social-wrapper img {
+  width: 100%;
+}
+
+footer {
+  opacity: 0.7;
+}
+
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 0.35rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Project pages */
+
+.project-title-detail {
+  font-size: 3rem;
+  margin: 5rem 0 3rem 0;
+}
+
+.project-statistic {
+  flex: 0.5;
+}
+
+.role-team-duration {
+  margin: 3rem 0;
+}
+
+.project-description {
+  flex: 1;
+}
+.brief-takeaway-tech {
+  margin-bottom: 2rem;
+}
+
+.brief-takeaway-tech h3 {
+  font-size: 3rem;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.brief-takeaway-tech p {
+  line-height: 1.75rem;
+}
+.label {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.credential {
+  margin-top: 1rem;
+}
+
+.img-preview-wrapper img {
+  width: 100%;
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 2rem;
+  }
+  nav {
+    flex-direction: column;
+  }
+  #logo {
+    text-align: center;
+  }
+  menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  main h1 {
+    font-size: 2rem;
+  }
+  main h2 {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    word-wrap: break-word;
+  }
+
+  #job {
+    flex-direction: column;
+  }
+
+  #job h4 {
+    margin-bottom: 1rem;
+  }
+  #job p {
+    text-align: center;
+  }
+  .start-date-card {
+    align-self: center;
+  }
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .project-img img {
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+  .social-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo-social-wrapper {
+    margin: 2rem 0;
+  }
+
+  .project-detail {
+    flex-direction: column;
+  }
+}
